@@ -1,0 +1,19 @@
+{
+    "name": "model-tiers",
+    "description": "model-tiers",
+    "version": "0.0.0",
+    "author": {
+        "name": "serandives",
+        "email": "serandives@gmail.com"
+    },
+    "dependencies": {
+        "mongoose": "5.*",
+        "logger": "serandules/logger#master",
+        "validators": "serandules/validators#master",
+        "mongins": "serandules/mongins#master"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/serandules/model-tiers.git"
+    }
+}
