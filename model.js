@@ -23,7 +23,12 @@ var tier = Schema({
       length: 1000
     })
   },
-  limits: {
+  apis: {
+    type: Object,
+    required: true,
+    server: true
+  },
+  ips: {
     type: Object,
     required: true,
     server: true
