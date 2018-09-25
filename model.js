@@ -37,7 +37,7 @@ var tier = Schema({
 
 tier.plugin(mongins);
 tier.plugin(mongins.user);
-tier.plugin(mongins.createdAt);
-tier.plugin(mongins.updatedAt);
+tier.plugin(mongins.createdAt());
+tier.plugin(mongins.updatedAt());
 
 module.exports = mongoose.model('tiers', tier);
