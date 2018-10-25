@@ -35,7 +35,7 @@ var tier = Schema({
   }
 }, {collection: 'tiers'});
 
-tier.plugin(mongins);
+tier.plugin(mongins());
 tier.plugin(mongins.user);
 tier.plugin(mongins.createdAt());
 tier.plugin(mongins.updatedAt());
