@@ -3,11 +3,9 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var mongins = require('mongins');
-
 var validators = require('validators');
 
 var types = validators.types;
-var values = validators.values;
 
 var tier = Schema({
   name: {
