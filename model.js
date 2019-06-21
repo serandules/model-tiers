@@ -7,7 +7,7 @@ var validators = require('validators');
 
 var types = validators.types;
 
-var tier = Schema({
+var schema = Schema({
   name: {
     type: String,
     required: true,
@@ -33,9 +33,18 @@ var tier = Schema({
   }
 }, {collection: 'tiers'});
 
-tier.plugin(mongins());
-tier.plugin(mongins.user);
-tier.plugin(mongins.createdAt());
-tier.plugin(mongins.updatedAt());
+schema.plugin(mongins());
+schema.plugin(mongins.user);
+schema.plugin(mongins.permissions({
+  workflow: 'model'
+}));
+schema.plugin(mongins.status({
+  workflow: 'model'
+}));
+schema.plugin(mongins.visibility({
+  workflow: 'model'
+}));
+schema.plugin(mongins.createdAt());
+schema.plugin(mongins.updatedAt());
 
-module.exports = mongoose.model('tiers', tier);
+module.exports = mongoose.model('tiers', schema);
