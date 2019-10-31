@@ -46,5 +46,6 @@ schema.plugin(mongins.visibility({
 }));
 schema.plugin(mongins.createdAt());
 schema.plugin(mongins.updatedAt());
+schema.plugin(mongins.modifiedAt());
 
 module.exports = mongoose.model('tiers', schema);
